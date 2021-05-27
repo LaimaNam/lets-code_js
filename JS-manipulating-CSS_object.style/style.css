@@ -1,0 +1,36 @@
+/* box style */
+
+/* bendras stilius */
+
+.box {
+  width: 450px;
+  height: 120px;
+  margin: 5px;
+  background-color: chartreuse; /* antras pagal svarbuma style*/
+}
+
+/* unikalus stilius */
+#box-1,
+#box-2,
+#box-3 {
+  background-color: grey; /* svarbiausias style*/
+}
+
+/* headline style */
+/* h1 {
+  transition: all 1s;
+}
+h1:hover {
+  font-size: 55px;
+} */
+
+.primary-headline {
+  color: rgb(109, 123, 252);
+}
+
+.small-box {
+  width: 50px;
+  height: 30px;
+  margin: 2px;
+  background-color: seagreen;
+}

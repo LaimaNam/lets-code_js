@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="">
+      <input type="url" id="url" name="url" placeholder="Insert image url" />
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="Enter your name"
+      />
+      <input type="number" id="age" name="age" placeholder="Enter your age" />
+      <h3>Your Gender</h3>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+      <br />
+      <!-- select-------- -->
+      <label for="relationship">Relationship status:</label>
+      <select name="relationship" id="relationship">
+        <option value="">select:</option>
+        <option value="1">single and ready to mingle</option>
+        <option value="2">married</option>
+        <option value="3">other</option>
+      </select>
+      <br />
+      <textarea
+        name="aboutYou"
+        id="aboutYou"
+        placeholder="Few things about you..."
+      ></textarea>
+      <br />
+      <button type="submit" id="btnsubmit">Print my card</button>
+    </form>
+    <div id="cardBox">
+      <img id="imgUrl" src="" alt="" />
+      <span id="nameSpan"></span>
+      <span id="ageSpan"></span>
+      <span id="genderSpan"></span>
+      <span id="relSpan"></span>
+      <span id="txtSpan"></span>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

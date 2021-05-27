@@ -1,0 +1,18 @@
+#grid-wrapper {
+  display: grid;
+  /* grid-template-areas:
+    "1 2 3 4 5 6 7"
+    "8 9 10 11 12 13 14"
+    "15 16 17 18 19 20 21"
+    "22 23 24 25 26 27 28"; */
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(4, 100px);
+  margin: auto;
+  gap: 15px;
+  width: 800px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: cornflowerblue;
+}

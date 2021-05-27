@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cao form</title>
+  </head>
+  <body>
+    <h1></h1>
+    <form action="">
+      <input type="text" name="firstName" placeholder="Write your name" />
+      <input type="number" name="age" placeholder="Write yourage" />
+
+      <button type="submit">ADD</button>
+    </form>
+    <h2></h2>
+
+    <form id="cinemaForm" action="">
+      <input type="number" name="age" id="age" placeholder="write your age" />
+      <button type="submit">Submit</button>
+    </form>
+    <h3 id="ticketPrice"></h3>
+
+    <h3>Can I go to the Army?</h3>
+    <form id="armyCheck" action="">
+      <input type="number" id="legalAge" placeholder="write your age" />
+      <h4>Do you have criminal record?</h4>
+      <input type="radio" id="yes" name="criminalRecord" value="yes" />
+      <label for="yes">Yes</label><br />
+      <input type="radio" id="no" name="criminalRecord" value="no" />
+      <label for="no">No</label><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script src="app.js"></script>
+  </body>
+</html>

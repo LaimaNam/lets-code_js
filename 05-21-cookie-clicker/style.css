@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=920&q=80);
+}
+
+.gameContainer {
+  width: 60%;
+  margin: 100px auto;
+  padding: 50px;
+  background-color: rgba(113, 112, 126, 0.7);
+  border-radius: 20px;
+  color: white;
+}
+
+img {
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+#cookie {
+  transition: 0.2s;
+  /* border-radius: 75%; */
+}
+
+#cookieVarriations {
+  text-align: center;
+  display: none;
+}
+#cookieVarriations img {
+  width: 10%;
+}
+.scoreTxt {
+  display: none;
+  text-align: center;
+}
+
+.gameContainer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: crosshair;
+}
+
+/* cokkie rotate */
+.rotate {
+  animation-name: spinner;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* states */
+
+#gamePage {
+  display: none;
+}
+
+#shopPage {
+  display: none;
+}

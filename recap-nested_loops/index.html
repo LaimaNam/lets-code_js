@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NESTED LOOPS: ciklas cikle</title>
+  </head>
+  <body>
+    <script>
+      let data = [
+        [{ name: 'Ernestas' }, { name: 'Rasa' }, { name: 'Tomas' }],
+        [{ name: 'Tadas' }, { name: 'Tomas' }, { name: 'Rokas' }],
+      ];
+      const myFunc = (arr) => {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr[i].length; j++) {
+            console.log(arr[i][j].name);
+          }
+        }
+      };
+      console.log(myFunc(data));
+      let data = [
+        [{ name: 'Ernestas' }, { name: 'Rasa' }, { name: 'Tomas' }],
+        [{ name: 'Tadas' }, { name: 'Tomas' }, { name: 'Rokas' }],
+      ];
+      const myFunc = (arr) => {
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr[i].length; j++) {
+            console.log(arr[i][j].name);
+          }
+        }
+      };
+      console.log(myFunc(data));
+    </script>
+  </body>
+</html>

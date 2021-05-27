@@ -1,11 +1,11 @@
 // hmtl'e bus tik container and button
 
-// VARIABLES : ---------------------------------
+// VARIABLES : --------------------------------->
 const header = document.querySelector('header');
 const navigationBox = document.querySelector('.navigation');
 const togglerBtn = document.querySelector('.fas');
 
-// CREATING ELEMENTS
+// CREATING ELEMENTS ----------------------------->
 const navigationList = document.createElement('ul');
 navigationList.innerHTML = `
 <li><a href="">Home</a></li>
@@ -52,73 +52,63 @@ function largeWindowMenuStyle() {
     element.style.color = 'white';
   });
 }
-// functionality--------------------------------------------->
+// FUNCTIONALITY--------------------------------------------->
 
-let width = window.innerWidth;
-
-if (width < 768) {
-  let showingMenu = true;
-
-  togglerBtn.addEventListener('click', () => {
-    if (showingMenu) {
-      // navigationBox.appendChild(navigationList);
-      navigationBox.style.display = 'block';
-      showingMenu = false;
-      smallWindowMenuStyle();
-    } else {
-      // navigationBox.removeChild(navigationList);
-      navigationBox.style.display = 'none';
-      showingMenu = true;
-    }
-  });
-} else {
+function showDesctopView() {
   navigationBox.style.display = 'block';
   togglerBtn.style.display = 'none';
   largeWindowMenuStyle();
 }
 
-//TOGGLE MENU event -----------------------------
-// let showingMenu = true;
+function showTabletView() {
+  togglerBtn.style.display = 'flex';
+  navigationBox.style.display = 'none';
 
-// togglerBtn.addEventListener('click', () => {
-//   if (showingMenu) {
-//     // navigationBox.appendChild(navigationList);
-//     navigationBox.style.display = 'block';
-//     showingMenu = false;
-//     smallWindowMenuStyle();
-//     // ----------------------->
-//   } else {
-//     // navigationBox.removeChild(navigationList);
-//     navigationBox.style.display = 'none';
-//     showingMenu = true;
-//   }
-// });
+  smallWindowMenuStyle();
+}
 
-// ------------------------------>
+function checkScreen() {
+  const checkMobile = window.matchMedia('screen and (max-width: 575px)');
+  const checkTablet = window.matchMedia(
+    'screen and (min-width: 576px) and (max-width: 991px)'
+  );
+  const checkDesktop = window.matchMedia('screen and (min-width: 992px)');
 
-// let mql = window.matchMedia('(max-width: 768px)');
-// function responsive(e) {
-//   if (e.matches) {
-//     let showingMenu = true;
+  if (checkTablet.matches || checkDesktop.matches) showDesctopView();
 
-//     togglerBtn.addEventListener('click', () => {
-//       if (showingMenu) {
-//         // navigationBox.appendChild(navigationList);
-//         navigationBox.style.display = 'block';
-//         showingMenu = false;
-//         smallWindowMenuStyle();
-//         // ----------------------->
-//       } else {
-//         // navigationBox.removeChild(navigationList);
-//         navigationBox.style.display = 'none';
-//         showingMenu = true;
-//       }
-//     });
-//   } else {
-//     navigationBox.style.display = 'block';
-//     togglerBtn.style.display = 'none';
-//     largeWindowMenuStyle();
-//   }
-// }
+  checkMobile.addEventListener('change', (e) => {
+    if (e.matches) {
+      console.log('MOBILE');
+      showTabletView();
+    }
+  });
 
-// mql.addEventListener('change', responsive);
+  checkTablet.addEventListener('change', (e) => {
+    if (e.matches) {
+      console.log('TABLET');
+      showDesctopView();
+    }
+  });
+  checkDesktop.addEventListener('change', (e) => {
+    if (e.matches) {
+      console.log('DESKTOP');
+      showDesctopView();
+    }
+  });
+}
+
+checkScreen();
+
+// EVENTS ---------------------------------------->
+let showingMenu = true;
+
+togglerBtn.addEventListener('click', () => {
+  if (showingMenu) {
+    navigationBox.style.display = 'block';
+    showingMenu = false;
+    smallWindowMenuStyle();
+  } else {
+    navigationBox.style.display = 'none';
+    showingMenu = true;
+  }
+});

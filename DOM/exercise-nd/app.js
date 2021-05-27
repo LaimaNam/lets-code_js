@@ -28,6 +28,7 @@ togglerBtn.style.cursor = 'pointer';
 navigationList.style.color = 'white';
 
 function smallWindowMenuStyle() {
+  navigationList.style.display = 'block';
   navigationList.style.textAlign = 'center';
   navigationList.style.padding = '0';
   listItems.forEach((element) => {
@@ -66,7 +67,7 @@ function showTabletView() {
 
   smallWindowMenuStyle();
 }
-
+// Responsive menu
 function checkScreen() {
   const checkMobile = window.matchMedia('screen and (max-width: 575px)');
   const checkTablet = window.matchMedia(
@@ -99,7 +100,7 @@ function checkScreen() {
 
 checkScreen();
 
-// EVENTS ---------------------------------------->
+// burger button event
 let showingMenu = true;
 
 togglerBtn.addEventListener('click', () => {

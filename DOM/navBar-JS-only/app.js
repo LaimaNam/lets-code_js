@@ -54,7 +54,6 @@ function largeWindowMenuStyle() {
   });
 }
 // FUNCTIONALITY--------------------------------------------->
-
 function showDesctopView() {
   navigationBox.style.display = 'block';
   togglerBtn.style.display = 'none';
@@ -64,7 +63,6 @@ function showDesctopView() {
 function showTabletView() {
   togglerBtn.style.display = 'flex';
   navigationBox.style.display = 'none';
-
   smallWindowMenuStyle();
 }
 // Responsive menu

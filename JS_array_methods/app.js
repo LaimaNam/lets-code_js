@@ -127,28 +127,23 @@ console.log(allNumbersBiggerThan4);
 // ------------------------Exercises ----------------------
 // // Testuosime šį masyvą
 let arrOfNumbers = [5, 1, 7, 2, -9, 8, 2, 7, 9, 4, -5, 2, -6, -4, 6];
-// 1. Parašykite funkciją arrDoubled, kuri sukuria ir grąžina naują masyvą, kurio elementai padauginti iš 2;
 
+// 1. Parašykite funkciją arrDoubled, kuri sukuria ir grąžina naują masyvą, kurio elementai padauginti iš 2;
 const arrDoubled = (arr) => {
-  let doubletArray = arr.map((element) => element * 2);
-  return doubletArray;
+  return arr.map((element) => element * 2);
 };
 console.log(arrDoubled(arrOfNumbers));
 
-// 2. Parašykite funkciją arrMultiplied, kuri sukuria ir grąžina naują masyvą, kurio elementai padauginti iš argumentu nurodyto skaičiaus
+// 2. Parašykite funkciją arrMultiplied, kuri sukuria ir grąžina naują masyvą, kurio elementai padauginti iš argumente nurodyto skaičiaus
 const arrMultiplied = (arr, num) => {
-  let multipliedItems = arr.map((element) => element * num);
-  return multipliedItems;
+  return arr.map((element) => element * num);
 };
 
-console.log(arrMultiplied(arrOfNumbers, 5));
+console.log(arrMultiplied(arrOfNumbers, 3));
 
 // 3. Parašykite funkciją arrCountTwos, kuri suskaičiuoja dvejetus masyve
-
 const arrCountTwos = (arr) => {
-  let howManyTwos = arr.filter((element) => element === 2);
-
-  return howManyTwos.length;
+  return arr.filter((element) => element === 2);
 };
 
 console.log(arrCountTwos(arrOfNumbers));

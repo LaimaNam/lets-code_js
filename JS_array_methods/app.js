@@ -29,7 +29,7 @@ numbers1.forEach((item, index, array) => {
   //   console.log(`item: ${item} | Index: ${index} | Array: ${array}`);
 });
 
-//  --- EXAMPLE WITH .forEach() and DOM -------------------------------
+//  ---------------- EXAMPLE WITH .forEach() and DOM -------------------------------
 // changing body acording to div's background
 
 // variables
@@ -143,7 +143,8 @@ console.log(arrMultiplied(arrOfNumbers, 3));
 
 // 3. Parašykite funkciją arrCountTwos, kuri suskaičiuoja dvejetus masyve
 const arrCountTwos = (arr) => {
-  return arr.filter((element) => element === 2);
+  let howManyYwos = arr.filter((element) => element === 2);
+  return howManyYwos.length;
 };
 
 console.log(arrCountTwos(arrOfNumbers));

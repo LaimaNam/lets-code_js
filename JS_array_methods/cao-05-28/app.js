@@ -70,3 +70,5 @@ const string =
 let countPotatoes = string.toLowerCase().match(/potato/g);
 console.log(countPotatoes);
 console.log(countPotatoes.length);
+
+// ---------------------------------------------------------------------

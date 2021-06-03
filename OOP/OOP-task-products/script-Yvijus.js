@@ -25,10 +25,10 @@ class Product {
   // 4. Patobulinkite objektų kūrimo kontsruktoriaus Products metododą aptartą 1.2. punkte, kad jis turėtų tokį funkcionalumą: patikrins ar produktas turi akciję kainą ir jeigu turi gražins tą nuolaidą kaip procentinę išraišką (pvz. produkto kaina 10 Eur, akcijinė kaina 7 Eur, gražins "Produktui "Nike pants" taikoma 30% nuolada");
   getProductSale() {
     if (this.salePrice) {
-      return `Produktui ${this.name} taikoma ${(
-        (this.salePrice / this.price) *
-        100
-      ).toFixed(0)}% nuolaida!`;
+      const discount = 100 - (this.salePrice / this.price) * 100;
+      return `Produktui ${this.name} taikoma ${Math.round(
+        discount
+      )}% nuolaida!`;
     }
     return `${this.name} akcija nera taikoma.`;
   }
@@ -38,7 +38,7 @@ class Product {
 const shoeNike = new Product('Nike shoes', 20, '', ['Shoes']);
 const pantsAdidas = new Product('Adidas pants', 30, 15, ['Pants']);
 const shirtAdidas = new Product('Adidas shirt', 20, 10, ['T-shirts']);
-const sweaterAdidas = new Product('Adidas sweater', 40, 40, ['Sweater']);
+const sweaterAdidas = new Product('Adidas sweater', 40, 30, ['Sweater']);
 const pantsNike = new Product('Nike pants', 59, 40, ['Pants']);
 const jumpsuitNike = new Product('Nike jumpsuit', 78, '', ['Pants', 'Sweater']);
 // Products pushed to array
@@ -107,3 +107,4 @@ console.log(isOnSale(currentProducts));
 // 4. Patobulinkite objektų kūrimo kontsruktoriaus Products metododą aptartą 1.2. punkte, kad jis turėtų tokį funkcionalumą: patikrins ar produktas turi akciję kainą ir jeigu turi gražins tą nuolaidą kaip procentinę išraišką (pvz. produkto kaina 10 Eur, akcijinė kaina 7 Eur, gražins "Produktui "Nike pants" taikoma 30% nuolada");
 console.log(pantsNike.getProductSale());
 console.log(jumpsuitNike.getProductSale());
+console.log(sweaterAdidas.getProductSale());

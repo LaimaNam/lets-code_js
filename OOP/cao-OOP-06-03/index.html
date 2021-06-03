@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid blue;
+        padding: 7px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      #form-1 {
+        width: min-content;
+      }
+      #form-1,
+      table,
+      h3 {
+        margin: 10px auto;
+      }
+
+      #form-2 {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        margin: 30px auto;
+        border: 1px solid black;
+        padding: 30px;
+      }
+      #form-2 input {
+        margin: 5px;
+      }
+
+      img {
+        object-fit: contain;
+        width: 200px;
+        height: 200px;
+      }
+
+      #cars-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>First task ----</h3>
+    <form id="form-1">
+      <input id="fullName" type="text" placeholder="full name" />
+    </form>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+      </tr>
+      <tr>
+        <td id="name"></td>
+        <td id="surname"></td>
+      </tr>
+    </table>
+    <hr />
+    <h3>Second task ----</h3>
+
+    <form id="form-2">
+      <label for="car-brand">Car brand:</label>
+      <input
+        type="text"
+        name="car-brand"
+        id="car-brand"
+        placeholder="Car brand"
+      />
+      <label for="car-model">Car model:</label>
+      <input
+        type="text"
+        name="car-model"
+        id="car-model"
+        placeholder="Car model"
+      />
+      <label for="car-mileage">Car mileage:</label>
+      <input
+        type="text"
+        name="car-mileage"
+        id="car-mileage"
+        placeholder="Car mileage"
+      />
+      <label for="car-price">Car price:</label>
+      <input
+        type="text"
+        name="car-price"
+        id="car-price"
+        placeholder="Car price"
+      />
+      <label for="car-img">Car image url:</label>
+      <input
+        type="url"
+        name="car-img"
+        id="car-img"
+        placeholder="Car image url"
+      />
+      <button type="submit">Post your car</button>
+    </form>
+    <div id="cars-box"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

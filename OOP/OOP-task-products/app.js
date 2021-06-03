@@ -77,5 +77,3 @@ const filterProductAccordingToPrice = (products, price, strOrNum) => {
 };
 
 console.log(filterProductAccordingToPrice(currentProducts, 10, 'nuo'));
-
-// Yvijus

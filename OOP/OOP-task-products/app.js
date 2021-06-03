@@ -52,9 +52,20 @@ const sportShoes = new Products('Adidas shoes', 89.9, 75.9, [
 ]);
 
 const sweater = new Products('sweater', 59.9, null, ['Sweater', 'Clothes']);
+const jumpsuitNike = new Products('Nike jumpsuit', 78, null, [
+  'Pants',
+  'Sweater',
+]);
 
 // -------------- all products ----------------
-const currentProducts = [tshirt, pants, sportSweater, sportShoes, sweater];
+const currentProducts = [
+  tshirt,
+  pants,
+  sportSweater,
+  sportShoes,
+  sweater,
+  jumpsuitNike,
+];
 
 // ------------------F I L T R A I ----------------------------
 
@@ -76,4 +87,4 @@ const filterProductAccordingToPrice = (products, price, strOrNum) => {
   });
 };
 
-console.log(filterProductAccordingToPrice(currentProducts, 10, 'nuo'));
+console.log(filterProductAccordingToPrice(currentProducts, 50, 'iki'));

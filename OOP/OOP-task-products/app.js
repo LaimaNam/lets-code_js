@@ -69,7 +69,7 @@ const filterProductAccordingToPrice = (products, price, strOrNum) => {
     } else if (strOrNum === 'iki') {
       // jei "iki"
       return product.getCurrentPrice() <= price;
-    } else {
+    } else if (strOrNum === 'nuo') {
       // jei "nuo"
       return product.getCurrentPrice() >= price;
     }

@@ -20,14 +20,14 @@ class Products {
   getProductInfo() {
     return `${this.name}, ${this.getCurrentPrice()} eur`;
   }
-
+  // check if product is on sale, if not return string
   isOnSale() {
     return this.salePrice !== null
       ? this.salePrice
       : `Šiam produktui akcija nėra taikoma.`;
   }
 
-  //   paduoda galutinę kainą:
+  // check current price of a product
   getCurrentPrice() {
     return this.salePrice !== null ? this.salePrice : this.price;
   }

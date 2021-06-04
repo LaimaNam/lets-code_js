@@ -53,7 +53,7 @@ currentProducts.push(
   jumpsuitNike
 );
 
-console.log(currentProducts);
+// console.log(currentProducts);
 
 // Filter function
 const filterProduct = (products, inputPrice, compare) => {
@@ -83,23 +83,21 @@ const filterProduct = (products, inputPrice, compare) => {
   });
 };
 
-console.log(filterProduct(currentProducts, 20, 40));
+// console.log(filterProduct(currentProducts, 20, 40));
 
 // ********** 2 DALIS **********
 // 3.2. Kategoriją (turi būti sukuriama funkcija, kuri leis vartotjui kaip argumentą nurodyti vieną iš kategorijų ir jam atvaizduos tas prekes, kurios turi tą kategoriją);
-const findProductAccordingToCategory = (products, userInsertedCategory) => {
+const findProductByCategory = (products, category) => {
   return products.filter((product) =>
-    product.category.some(
-      (categoryElement) => categoryElement === userInsertedCategory
-    )
+    product.category.some((categoryElement) => categoryElement === category)
   );
 };
 
-console.log(findProductAccordingToCategory(currentProducts, 'Sweater'));
+console.log(findProductByCategory(currentProducts, 'Sweater'));
 
 // 3.3. Akcijas, kuri parodys tas prekes, kurios turi akcijinę kainą;
 const isOnSale = (products) => {
-  return products.filter((product) => product.salePrice !== null);
+  return products.filter((product) => product.salePrice);
 };
 
 console.log(isOnSale(currentProducts));

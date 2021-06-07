@@ -11,10 +11,10 @@
 
 class Products {
   constructor(name, price, salePrice, category) {
-    (this.name = name),
-      (this.price = price),
-      (this.salePrice = salePrice),
-      (this.category = category);
+    this.name = name;
+    this.price = price;
+    this.salePrice = salePrice;
+    this.category = category;
   }
 
   getProductInfo() {
@@ -22,7 +22,7 @@ class Products {
   }
   // check if product is on sale, if not return string
   isOnSale() {
-    return this.salePrice !== null
+    return this.salePrice
       ? this.salePrice
       : `Šiam produktui akcija nėra taikoma.`;
   }

@@ -10,7 +10,11 @@
 //  - arba kainą iki ir rodys prekes nuo minimalios galimos iki tos kainos kurią nurodė;
 const categories = ['T-shirts', 'Pants', 'Sweater', 'Shoes'];
 
-// --- Class ---
+// ---------------------- Class ----------------------
+// name: string (Produkto pavadinimas)
+// price: number (Produkto kaina)
+// salePrice: number (jei akcija taikoma, nurodomo akcijine kaina, jei ne) || null (akcija netaikoma)
+// category: array (vardinami kategoriju pavadinimai kaip string)
 class Product {
   constructor(name, price, salePrice, category) {
     this.name = name;

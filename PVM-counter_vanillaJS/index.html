@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PVM skaiciuotuvas</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- custom JS -->
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header></header>
+      <main>
+        <h1>PVM skaičiuotuvas</h1>
+        <section id="input">
+          <form>
+            <div class="form-group">
+              <label for="input-without-pvm">Suma be PVM</label>
+              <input type="text" id="input-without-pvm" />
+            </div>
+            <div class="form-group">
+              <label for="input-with-pvm">Suma su PVM</label>
+              <input type="text" id="input-with-pvm" />
+            </div>
+            <div class="form-group">
+              <label for="pvm">PVM tarifas</label>
+              <select name="pvm" id="pvm">
+                  <option value="21">21%</option>
+                  <option value="9">9%</option>
+                  <option value="5">5%</option>
+              </select>
+          </form>
+        </section>
+        <section id="output">
+            <!-- suma be pvm -->
+            <p>Suma be PVM: </p>
+            <div class="output-div"> <span id="without-pvm-output"></span> </div>
+            <p>Suma su PVM: </p>
+            <div class="output-div"> <span id="with-pvm-output"></span> </div>
+            <p>PVM: </p>
+            <div class="output-div"> <span id="pvm-output"></span> </div>
+            <!-- error message -->
+            <p id="error-msg"></p>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

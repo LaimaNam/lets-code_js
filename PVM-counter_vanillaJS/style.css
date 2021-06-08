@@ -93,3 +93,8 @@ form {
   width: 50%;
   font-size: 1.5em;
 }
+
+#error-msg {
+  padding-top: 1em;
+  width: 100%;
+}

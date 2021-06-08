@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAO: Cookies ir LocalStorage</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- custom style -->
+    <style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+     margin: 0;
+}
+body {
+    background-image: url(https://images.unsplash.com/photo-1623133106725-1e3d77acb7f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#userProfileBox {
+    padding: 20px;
+    width: 30%;
+    background-color: rgba(247, 230, 206, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    gap: 15px;
+}
+
+#userAvatar{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+i {
+    cursor: pointer;
+    font-size: 40px;
+}
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section id="userProfile">
+          <div id="userProfileBox">
+            <img src="" alt="" id="userAvatar">
+            <h2 id="user-name"></h2>
+            <h3 id="user-description"></h3>
+            <p id="user-info"></p>
+            <div id="social-media-icons">
+               <a href="" id="fb" > <i class="fab fa-facebook-square" href=""></i></a>
+               <a href="" id="linkedin"><i class="fab fa-linkedin"  ></i></a> 
+            </div>
+          </div>
+
+          </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- custom JS -->
+    <script src="app.js"></script>
+  </body>
+</html>

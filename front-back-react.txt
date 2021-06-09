@@ -1,0 +1,42 @@
+----------------------------------------
+ WEBSITES
+ --------------------------------------
+- Frontendas: html, css, javaScript
+- Backend: optional
+
+----------------------------------------
+ WEB APPLICATION
+ ----------------------------------------
+- Frontendas: 
+--- html, css, javaScript
+- Backend: one language and one database
+--- Programming language: PHP | Node.js | Java
+--- Database: MySQL | MongoDB
+
+-----------------------------------
+WEB APPLICATIONS DEVELOPMENT
+-----------------------------------
+
+-Client side Rendering (CSR)
+
+--- Frontend: 
+-HTML, CSS, JS(React.js or Vue.js or Angular/Angula.js)
+
+--- Backend: one language ir one database:
+-Programming language: PHP | Node.js | Java
+-Database: MySQL | MongoDB
+
+----Communication between Front and Backend: REST API
+
+
+ -Server Side Rendering (SSR)
+
+---Backend:one language ir one database:
+- Programming language: PHP | Node.js | Java etc
+- Database: MySQL | MongoDB etc
+- Frontend: HTML CSS JS (Template engine(EJS, TWIG, PUG) or React.js(Naudojant next.js) or Vue.js(Nuxt.js))
+
+
+
+ ----
+ GraphQL (panasus kaip REST api)

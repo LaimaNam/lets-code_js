@@ -24,7 +24,6 @@ const someFunc = (e) => {
 
   tableDataName.innerText = localStorage.getItem('name');
   tableDataSurname.innerText = localStorage.getItem('surname');
-  fullName.value = '';
 };
 
 // event

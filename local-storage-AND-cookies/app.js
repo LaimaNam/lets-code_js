@@ -91,3 +91,38 @@ function deleteALLFromLocalStorage() {
   localStorage.clear();
 }
 btn5.addEventListener('click', deleteALLFromLocalStorage);
+
+// ---------------
+function createCookie(cookieName, cookieValue, hoursToExpire) {
+  let date = new Date();
+  date.setTime(date.getTime() + hoursToExpire * 60 * 60 * 1000);
+  document.cookie =
+    cookieName +
+    '=' +
+    cookieValue +
+    '; expires' +
+    date.toUTCString() +
+    '; sameSite=Lax';
+}
+function getCookie(cookieName) {
+  let cookieKey = cookieName.concat('=');
+  let cookieParts = decodeURIComponent(document.cookie).split(';');
+  cookieParts.forEach((element) => {
+    while (element.charAt(0) == ' ') {
+      element = element.substring(1);
+    }
+    if (element.indexOf(cookieKey) === 0) {
+      cookiePart = element.split('=');
+      let obj = JSON.parse(cookiePart[1]);
+      return obj;
+    }
+  });
+  return false;
+}
+createCookie(
+  'userData',
+  JSON.stringify({ uName: 'Deividas', dateOfLastLogin: new Date() }),
+  24
+);
+let result = getCookie('userData');
+console.log(result);

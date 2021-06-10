@@ -47,24 +47,28 @@ contentBox.append(table);
 //  ----
 const fetchedData = [];
 // --------------------- FUNCTIONS -------------------------
+
+const renderHTML = (person) => {
+  let nameSplitted = person.name.split(' ')[0];
+  let surname = person.name.replace(nameSplitted, '');
+  return `
+    <tr>
+        <td>${person.id}</td>
+        <td><img src="${person.image}"></td>
+        <td>${nameSplitted}</td>
+        <td>${surname}</td>
+        <td>${person.city}</td>
+        <td>${person.fav_color}</td>
+    </tr>
+    `;
+};
+
 const showAllData = () => {
   return fetch(DATA_URL)
     .then((response) => response.json())
     .then((data) => {
       tableBody.innerHTML = data.reduce((output, currentData) => {
-        let nameSplitted = currentData.name.split(' ')[0];
-        let surname = currentData.name.replace(nameSplitted, '');
-
-        output += `
-        <tr>
-            <td>${currentData.id}</td>
-            <td><img src="${currentData.image}"></td>
-            <td>${nameSplitted}</td>
-            <td>${surname}</td>
-            <td>${currentData.city}</td>
-            <td>${currentData.fav_color}</td>
-        </tr>
-        `;
+        output += renderHTML(currentData);
 
         return output;
       }, '');
@@ -77,19 +81,7 @@ function showOnlyVIP() {
     return (tableBody.innerHTML = fetchedData
       .filter((element) => element.vip === true)
       .reduce((output, currentData) => {
-        let nameSplitted = currentData.name.split(' ')[0];
-        let surname = currentData.name.replace(nameSplitted, '');
-
-        output += `
-  <tr>
-      <td>${currentData.id}</td>
-      <td><img src="${currentData.image}"></td>
-      <td>${nameSplitted}</td>
-      <td>${surname}</td>
-      <td>${currentData.city}</td>
-      <td>${currentData.fav_color}</td>
-  </tr>
-  `;
+        output += renderHTML(currentData);
 
         return output;
       }, ''));
@@ -107,19 +99,7 @@ const searchData = (e) => {
   return (tableBody.innerHTML = fetchedData
     .filter((e) => e.name.toLowerCase() === inputValue.trim().toLowerCase())
     .reduce((output, currentData) => {
-      let nameSplitted = currentData.name.split(' ')[0];
-      let surname = currentData.name.replace(nameSplitted, '');
-
-      output += `
-        <tr>
-            <td>${currentData.id}</td>
-            <td><img src="${currentData.image}"></td>
-            <td>${nameSplitted}</td>
-            <td>${surname}</td>
-            <td>${currentData.city}</td>
-            <td>${currentData.fav_color}</td>
-        </tr>
-        `;
+      output += renderHTML(currentData);
       return output;
     }, ''));
 };

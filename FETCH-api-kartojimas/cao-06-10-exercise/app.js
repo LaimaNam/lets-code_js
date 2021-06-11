@@ -92,9 +92,7 @@ function showOnlyVIP() {
 
 const searchData = (e) => {
   e.preventDefault();
-
   let inputValue = searchInput.value;
-  console.log(inputValue);
 
   return (tableBody.innerHTML = fetchedData
     .filter((e) => e.name.toLowerCase() === inputValue.trim().toLowerCase())

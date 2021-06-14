@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body {
+  background-color: rgb(241, 241, 241);
+}
+
+.wrapper {
+  padding: 80px;
+  background-color: white;
+  max-width: 1180px;
+  margin: 30px auto;
+}
+
+#main-title {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.filter-box,
+.filter-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-products {
+  gap: 30px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  background-color: tomato;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-btn .fa-bars {
+  margin-right: 10px;
+}
+
+#sort-products {
+  padding: 5px;
+  border-color: rgb(197, 196, 196);
+  color: rgb(197, 196, 196);
+  appearance: none;
+  background-image: url(chevron-down-solid.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 20px;
+  background-position-x: 140px;
+  cursor: pointer;
+  outline: none;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopItem h3 {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.shopItem p {
+  font-weight: bold;
+  margin: 5px;
+}

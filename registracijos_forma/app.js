@@ -72,10 +72,11 @@ const displayOneUser = (user) => {
 // --- function getDataFromLocalStorage - get data form LS and saves it to user array
 const getDataFromLocalStorage = () => {
   let data = JSON.parse(localStorage.getItem('users'));
-  console.log(data);
   if (data != null) {
     users = data;
   }
+  console.log(data);
+
   displayUsers(users);
 };
 

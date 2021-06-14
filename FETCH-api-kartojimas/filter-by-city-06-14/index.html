@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter by City or State</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <h1>Enter City or State:</h1>
+        <input type="text" id="search" />
+
+        <h4>Atvaizduoti pagal:</h4>
+        <input type="radio" id="ascending" name="show-by" checked />
+        <label for="ascending">Gyventojų skaičius didėjant</label>
+
+        <input type="radio" id="descending" name="show-by" />
+        <label for="descending">Gyventojų skaičius mažėjant</label>
+      </section>
+      <section>
+        <ul id="suggestions"></ul>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

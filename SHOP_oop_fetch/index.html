@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main class="wrapper">
+      <!-- <section id="filter">
+        <h2>Filter</h2>
+        <div>
+          <input
+            type="radio"
+            name="filter"
+            id="all-products"
+            value="all-products"
+            checked
+          />
+          <label for="all-produtcts">All products</label> <br />
+
+          <input type="radio" name="filter" id="canvases" value="Canvases" />
+          <label for="canvases">canvases</label> <br />
+
+          <input type="radio" name="filter" id="posters" value="Posters" />
+          <label for="posters">posters</label> <br />
+
+          <input type="radio" name="filter" id="stickers" value="Stickers" />
+          <label for="stickers">stickers</label> <br />
+        </div>
+      </section> -->
+
+      <section id="shop-hero">
+        <h1 id="main-title">Shop</h1>
+        <div class="filter-box">
+          <div class="filter-products">
+            <button class="filter-btn">
+              <i class="fas fa-bars"></i>Filter
+            </button>
+            <p>
+              Showing <span id="products-per-page">1-16</span> of
+              <span id="all-products">90</span> results
+            </p>
+          </div>
+
+          <form>
+            <select name="sort-products" id="sort-products">
+              <option value="by-popularity">Sort by popularity</option>
+              <option value="by-price-low-to-high">
+                Sort by price (low to high)
+              </option>
+              <option value="by-price-high-to-low">
+                Sort by price (high to low)
+              </option>
+              <option value="by-name">Sort by name</option>
+            </select>
+          </form>
+        </div>
+      </section>
+
+      <!-- products div -->
+      <section id="products"></section>
+    </main>
+
+    <footer></footer>
+
+    <!-- CUSTOM JS -->
+    <script src="app.js"></script>
+  </body>
+</html>

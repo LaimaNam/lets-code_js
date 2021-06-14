@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-section {
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        padding: 50px;
+        background-color: rgba(232, 236, 241, 1);
+      }
+      input {
+        border: 0;
+        margin-left: 10px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      #error-message {
+        padding-top: 20px;
+      }
+
+      #submit-car-btn {
+        border: 0;
+        padding: 5px 20px;
+        font-weight: bold;
+        background-color: rgba(103, 128, 159, 1);
+        color: white;
+      }
+
+      label {
+        font-weight: bold;
+        color: rgb(85, 85, 85);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav><a href="index.html">Home</a></nav>
+    </header>
+    <main>
+      <section class="form-section">
+        <form>
+          <label for="brand">Brand</label>
+          <input type="text" name="brand" id="brand" />
+          <br />
+          <br />
+          <label for="model">Model</label>
+          <input type="text" name="model" id="model" />
+          <br />
+          <br />
+          <button id="submit-car-btn" type="submit">Submit</button>
+          <div id="error-message"></div>
+        </form>
+      </section>
+    </main>
+    <script src="add.js"></script>
+  </body>
+</html>

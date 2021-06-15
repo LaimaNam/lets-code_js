@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.default-width {
+  max-width: 880px;
+  width: 90%;
+  margin: auto;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.hero {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(52, 216, 180);
+  color: rgb(255, 255, 255);
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+.filter-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.filter-wrapper h3 {
+  margin-bottom: 10px;
+}
+
+.filter-btns {
+  justify-content: space-between;
+}
+
+.left-btns {
+  gap: 5px;
+}
+
+.btn {
+  border: 2px solid rgb(196, 196, 196);
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 2px solid rgb(52, 216, 180);
+  color: rgb(52, 216, 180);
+}
+
+.add-property-btn {
+  background-color: rgb(52, 216, 180);
+  border: none;
+  padding: 7px 12px;
+}
+
+.add-property-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.add-property-btn:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid rgb(196, 196, 196);
+  padding: 5px 10px;
+}
+
+.add-property-btn a:hover {
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin-bottom: 5px;
+}
+form input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 3px;
+}
+
+textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  color: rgb(189, 189, 189);
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 3px;
+}
+
+select {
+  width: min-content;
+  border: 1px solid rgb(196, 196, 196);
+  padding: 7px;
+}
+
+/* property list item style */
+
+#property-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  cursor: pointer;
+}
+.property-list-item {
+  width: 200px;
+  /* box-shadow: 0px 3px 10px 2px #cfcece; */
+  border: 2px solid #cfcece;
+  height: auto;
+}
+.property-details {
+  padding: 18px;
+}
+
+.property-list-item:hover {
+  box-shadow: 0px 0px 11px 2px #a1a1a1;
+}
+
+img {
+  /* object-fit: cover; */
+  display: block;
+  max-width: 100%;
+  width: 200px;
+  height: 120px;
+}

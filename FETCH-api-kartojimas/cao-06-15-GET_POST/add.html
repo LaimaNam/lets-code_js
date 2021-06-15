@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- hero -->
+      <section class="hero">
+        <div class="default-width">
+          <h1>Add your property for sale</h1>
+          <p>Yes, you can sell where you live and get cash!</p>
+        </div>
+      </section>
+      <section class="default-width">
+        <div class="filter-wrapper">
+          <h3>Add Property</h3>
+          <!-- form -->
+          <form action="index.html">
+            <label for="img-url">Img</label>
+            <input
+              type="url"
+              name="img-url"
+              id="img-url"
+              placeholder="https://google.com"
+            />
+
+            <label for="price">Price, EUR</label>
+            <input type="number" name="price" id="price" placeholder="50000" />
+
+            <label for="price">Description</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="Anything you would like to say about your property?"
+            ></textarea>
+
+            <label for="select-city">City</label>
+            <select name="city" id="city">
+              <option value="Vilnius">Vilnius</option>
+              <option value="Kaunas">Kaunas</option>
+              <option value="Klaipėda">Klaipėda</option>
+            </select>
+
+            <button
+              class="add-property-btn btn"
+              style="width: 150px; margin-top: 15px"
+              type="submit"
+            >
+              Add property
+            </button>
+          </form>
+          <p id="error-msg"></p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="add.js"></script>
+  </body>
+</html>

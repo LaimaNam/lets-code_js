@@ -43,11 +43,26 @@ app.put('/adverts/:id/', (req, res) => {
       return advert;
     }
   });
-  console.log(updatedAdvert);
 
   adverts.length = 0;
   adverts.push(...updatedAdverts);
   res.send({ data: updatedAdverts, message: 'Advert updated!' });
+});
+
+//DELETE ----------------------------------------
+app.delete('/adverts/:id/', (req, res) => {
+  let advertID = +req.params.id;
+
+  let updatedAdverts = adverts.reduce((newArr, currentItem) => {
+    if (currentItem.id !== advertID) {
+      newArr.push(currentItem);
+    }
+    return newArr;
+  }, []);
+
+  adverts.length = 0;
+  adverts.push(...updatedAdverts);
+  res.send({ data: updatedAdverts, message: 'Advert deleted!' });
 });
 
 // ... starting server-------------------------------------
@@ -65,9 +80,13 @@ app.listen(5000, () => console.log('Server is running on port: 5000'));
 //GET:
 //     ----/adverts - get all adverts
 //     ----/adverts/:id - get advert based on id
+
 // POST:
 //     ---ideti kazka naujo
 //     ---/adverts - add to all adverts
 
 //PUT:
 //   --- /adverts/:id - atnaujinti vieną item'ą based on id
+
+//DELETE:
+//   ---/adverts/:id - delete advert based on id

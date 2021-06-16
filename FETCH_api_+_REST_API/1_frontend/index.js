@@ -35,8 +35,10 @@ function getAndShowAllAdverts() {
       advertsListElement.innerHTML = output;
 
       const updateBtns = document.querySelectorAll('.update-btn');
-
       updateBtns.forEach((btn) => btn.addEventListener('click', updateForm));
+
+      const deleteBtns = document.querySelectorAll('.delete-btn');
+      deleteBtns.forEach((btn) => btn.addEventListener('click', deleteAdvert));
     });
 }
 
@@ -69,7 +71,8 @@ function sendAdvert(e) {
     });
 }
 
-//PUT (update data)
+//PUT (update data) ------
+
 function updateForm(e) {
   const advertElements = e.target.parentElement.children;
   id = +e.target.dataset.id;
@@ -111,13 +114,24 @@ function updateAdvert(e) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       successErrorMSG.innerText = data.message;
       getAndShowAllAdverts();
       formElement.reset();
 
       formElement.removeEventListener('submit', updateAdvert);
       formElement.addEventListener('submit', sendAdvert);
+    });
+}
+// DELETE data
+function deleteAdvert(e) {
+  console.log(e.target.dataset.id);
+  return fetch(ALL_ADVERTS + e.target.dataset.id, {
+    method: 'DELETE',
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      successErrorMSG.innerText = data.message;
+      getAndShowAllAdverts();
     });
 }
 

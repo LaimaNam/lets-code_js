@@ -5,11 +5,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ADVERTS DB - simulation
+// ADVERTS "DB" - simulation
 let adverts = [
   { id: 1, name: 'PS5', price: '800', phone: '+37067438970' },
   { id: 2, name: 'X-box', price: '900', phone: '+37067438555' },
-  { id: 3, name: 'X-box', price: '1900', phone: '+37067438555' },
 ];
 
 // ROUTES (REST API)
@@ -24,8 +23,9 @@ app.get('/adverts/:id/', (req, res) => {
 
 // POST ----------------------------------------
 app.post('/adverts/', (req, res) => {
-  let id = adverts[adverts.length - 1].id + 1;
-
+  // sugeneruojamas id
+  let id = adverts.length === 0 ? 1 : adverts[adverts.length - 1].id + 1;
+  // req.body - yra name price ir phone is front endo formos
   adverts.push({ id, ...req.body });
 
   res.send({ data: adverts, message: 'New advert added!' });

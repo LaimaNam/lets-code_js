@@ -4,8 +4,6 @@ const ENDPOINT_URL = 'https://golden-whispering-show.glitch.me';
 //DOM variables
 const productsOutput = document.querySelector('#all-products');
 
-let id;
-
 //functions
 
 // --- GET data

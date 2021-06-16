@@ -8,16 +8,17 @@ const formElement = document.querySelector('form');
 const successErrorMSG = document.querySelector('#success-error-msg');
 
 // Logic
-// --- id to update
+// --- id to know which advert need's to be updated
 let id;
 
 //Functions
+// --- GET data
 function getAndShowAllAdverts() {
   return fetch(ALL_ADVERTS)
     .then((response) => response.json())
     .then((data) => {
-      // let adverts = data.reverse();
-      let adverts = data;
+      let adverts = data.reverse();
+      // let adverts = data;
       let output = '';
 
       for (let advert of adverts) {
@@ -66,14 +67,15 @@ function sendAdvert(e) {
     .then((response) => response.json())
     .then((data) => {
       successErrorMSG.innerText = data.message;
+      // kvieciame del to, kad rodytu iskart adverts
       getAndShowAllAdverts();
       formElement.reset();
     });
 }
 
 //PUT (update data) ------
-
 function updateForm(e) {
+  //paima visus div'o elemntus
   const advertElements = e.target.parentElement.children;
   id = +e.target.dataset.id;
 
@@ -124,7 +126,6 @@ function updateAdvert(e) {
 }
 // DELETE data
 function deleteAdvert(e) {
-  console.log(e.target.dataset.id);
   return fetch(ALL_ADVERTS + e.target.dataset.id, {
     method: 'DELETE',
   })

@@ -1,0 +1,11 @@
+POST http://64.227.127.73/skills/
+Content-Type: application/json
+
+{
+    "title": "SCSS",
+    "level": 99
+}
+
+
+###
+GET http://64.227.127.73/experiences/

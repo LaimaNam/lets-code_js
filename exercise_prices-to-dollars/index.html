@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // Convert prices in https://reklama.setupad.com to dollars using the current exchange rate from https://exchangeratesapi.io/ API. The script has to work just pasting it to the Dev Tools console. Please upload the script to https://gist.github.com/
+
+    const CURRENCY_API =
+      'http://api.exchangeratesapi.io/v1/latest?access_key=0760c4225a3b43c00ab866c5f4bd88b9';
+
+    //variables
+    let basePrices = [200, 500, 1000];
+
+    const convertPricesToDollars = (numbers) => {
+      fetch(CURRENCY_API)
+        .then((response) => response.json())
+        .then((data) => {
+          let output = [];
+          for (let price of numbers) {
+            let newPriceInUSD = +(price * data.rates.USD).toFixed(2);
+            output.push(newPriceInUSD);
+          }
+          console.log(output);
+          return output;
+        });
+    };
+
+    convertPricesToDollars(basePrices);
+  </script>
+</html>
+
+<!-- // API endpoint
+const CURRENCY_API =
+  'http://api.exchangeratesapi.io/v1/latest?access_key=0760c4225a3b43c00ab866c5f4bd88b9';
+// Variables
+const pricesInEuro = [200, 500, 1000];
+// Functions
+const convertPricesToDollors = (prices) => {
+  return fetch(CURRENCY_API)
+    .then((response) => response.json())
+    .then((data) =>
+      console.log(
+        prices.map((price) => +(price * data.rates.USD).toFixed(2))
+      )
+    );
+};
+convertPricesToDollors(pricesInEuro); -->
+
+<!-- // API endpoint
+const CURRENCY_API =
+'http://api.exchangeratesapi.io/v1/latest?access_key=0760c4225a3b43c00ab866c5f4bd88b9';
+// Variables
+const pricesInEuro = [200, 500, 1000];
+// Functions
+const convertPricesToDollors = async (prices) => {
+    let response = await fetch(CURRENCY_API);
+    let data = await response.json();
+    console.log(
+  prices.map((price) => +(price * data.rates.USD).toFixed(2))
+    );
+};
+convertPricesToDollors(pricesInEuro); -->

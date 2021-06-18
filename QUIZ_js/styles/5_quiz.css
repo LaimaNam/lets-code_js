@@ -1,4 +1,51 @@
 #wrapper {
   width: 100%;
   height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper .container {
+  width: 80%;
+  padding: 25px;
+  background-color: var(--light-color);
+  border: 10px solid var(--accent-color);
+}
+
+/*-----------  wrapper > container --------------- */
+#wrapper .container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* quiz > quiz__questions */
+
+/* quiz > quiz__controls */
+
+.quiz__controls {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: calc(50% - 10px);
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1.2em;
+  color: var(--light-color);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.hide {
+  display: none;
 }

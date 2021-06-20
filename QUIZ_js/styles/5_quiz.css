@@ -9,6 +9,7 @@
 
 #wrapper .container {
   width: 80%;
+  max-width: 1024px;
   padding: 25px;
   background-color: var(--light-color);
   border: 10px solid var(--accent-color);
@@ -19,11 +20,21 @@
   text-align: center;
   margin-bottom: 30px;
 }
+/* wrapper .container > quiz */
 
-/* quiz > quiz__questions */
+/* quiz > quiz__question */
+#question {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#answers-btns {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* quiz > quiz__controls */
-
 .quiz__controls {
   margin-top: 15px;
   display: flex;
@@ -32,6 +43,12 @@
   align-items: center;
 }
 
+#result {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* utilities */
 .btn {
   width: calc(50% - 10px);
   margin: 5px;
@@ -39,13 +56,68 @@
   border: none;
   font-size: 1.2em;
   color: var(--light-color);
+  word-wrap: break-word;
 }
 
 .btn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+.btn.btn-js {
+  background-color: var(--js-color);
+}
+
+.btn.btn-html {
+  background-color: var(--html-color);
+}
+
+.btn.btn-css {
+  background-color: var(--css-color);
+}
+
+.btn.correct {
+  background-color: var(--correct-color);
+  color: var(--light-color);
+}
+
+.btn.wrongHTML {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+.btn.wrong {
+  background-color: var(--wrong-color);
+  color: var(--light-color);
+}
+
+.btn.next-btn {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+}
 
 .hide {
   display: none;
+}
+
+.fa-trophy,
+.fa-sad-tear,
+.fa-rocket {
+  font-size: 2.5em;
+  color: rgb(226, 236, 77);
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-sad-tear {
+  color: var(--dark-color);
 }

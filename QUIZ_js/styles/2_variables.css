@@ -7,4 +7,7 @@
   --html-color: #e54d28;
   --css-color: #0a74b8;
   --js-color: #dab92c;
+
+  --correct-color: rgb(4, 187, 4);
+  --wrong-color: rgb(255, 99, 71);
 }

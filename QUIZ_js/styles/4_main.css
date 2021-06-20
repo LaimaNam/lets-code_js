@@ -3,4 +3,73 @@
 main {
   width: calc(100vw - (100vw - 100%));
   height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/matrix-background-eps10-vector-30165844.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+.main-content {
+  padding: 100px;
+  width: 100%;
+  /* background-color: var(--dark-color); */
+  max-width: 700px;
+}
+
+#quiz-navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#quiz-navigation-buttons button {
+  width: 100%;
+  padding: 20px 70px;
+  cursor: pointer;
+  background-color: var(--dark-color);
+  border: none;
+}
+
+#quiz-navigation-buttons button:hover {
+  background-color: #363636;
+}
+
+#quiz-navigation-buttons i {
+  font-size: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #01f002;
+  transition: font-size 1s;
+}
+
+#quiz-navigation-buttons i:hover {
+  font-size: 5.5em;
+}
+
+#quiz-navigation-buttons a {
+  text-decoration: none;
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-color);
+  font-size: 1.5em;
+}
+
+/* 
+#quiz-navigation-buttons .fa-html5 {
+  color: var(--html-color);
+}
+
+#quiz-navigation-buttons .fa-css3-alt {
+  color: var(--css-color);
+}
+#quiz-navigation-buttons .fa-js {
+  color: var(--js-color);
+} */

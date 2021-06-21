@@ -6,7 +6,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/matrix-background-eps10-vector-30165844.jpg);
+  /* background-image: url(../assets/matrix-background-eps10-vector-30165844.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -44,7 +44,7 @@ main {
   font-size: 70px;
   margin-left: 10px;
   margin-right: 10px;
-  color: #01f002;
+  /* color: #01f002; */
   transition: font-size 1s;
 }
 
@@ -62,7 +62,6 @@ main {
   font-size: 1.5em;
 }
 
-/* 
 #quiz-navigation-buttons .fa-html5 {
   color: var(--html-color);
 }
@@ -72,4 +71,4 @@ main {
 }
 #quiz-navigation-buttons .fa-js {
   color: var(--js-color);
-} */
+}

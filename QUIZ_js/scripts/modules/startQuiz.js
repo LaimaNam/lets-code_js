@@ -4,8 +4,7 @@ const startQuiz = (
   startBtnElement,
   quizQuestionElement,
   resultElement,
-  score,
-  index,
+  state,
   questions
 ) => {
   startBtnElement.classList.add('hide');
@@ -14,12 +13,12 @@ const startQuiz = (
   // -- resetting score and index
   if (!resultElement.classList.contains('hide')) {
     resultElement.classList.add('hide');
-    score = 0;
+    state.score = 0;
   }
 
-  index = 0;
+  state.index = 0;
 
-  setNextQuestion(questions, score, index);
+  setNextQuestion(questions, state);
 };
 
 export default startQuiz;

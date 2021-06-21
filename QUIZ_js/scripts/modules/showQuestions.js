@@ -1,8 +1,7 @@
 import selectAnswer from './selectAnswer.js';
 
-const showQuestions = (questions, score, index) => {
-  const question = questions[index];
-  console.log(questions[index]);
+const showQuestions = (questions, state) => {
+  const question = questions[state.index];
   const questionelement = document.querySelector('#question');
   const answersBtnsElement = document.querySelector('#answers-btns');
 
@@ -17,7 +16,7 @@ const showQuestions = (questions, score, index) => {
       button.dataset.correct = answer.correct;
     }
     button.addEventListener('click', (e) => {
-      selectAnswer(e, questions, score, index);
+      selectAnswer(e, questions, state);
     });
 
     answersBtnsElement.appendChild(button);

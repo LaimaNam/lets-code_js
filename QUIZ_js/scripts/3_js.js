@@ -10,8 +10,10 @@ const resultElement = document.querySelector('#result');
 
 // -- logic
 let questions = [];
-let index = 0;
-let score = 0;
+let quizState = {
+  index: 0,
+  score: 0,
+};
 
 //-- fetching data (questions from data folfer to questions array)
 import fetchData from './modules/fetch.js';
@@ -30,13 +32,10 @@ startBtnElement.addEventListener('click', () => {
     startBtnElement,
     quizQuestionElement,
     resultElement,
-    score,
-    index,
+    quizState,
     questions
   );
 });
 nextBtnElement.addEventListener('click', () => {
-  // index = showNextQuestion(questions, score, index);
-  index++;
-  showNextQuestion(questions, score, index);
+  showNextQuestion(questions, quizState);
 });

@@ -1,9 +1,8 @@
 import setNextQuestion from './setNextQuestion.js';
 
-const showNextQuestion = (questions, score, index) => {
-  index++;
-  setNextQuestion(questions, score, index);
-  return index;
+const showNextQuestion = (questions, state) => {
+  state.index++;
+  setNextQuestion(questions, state);
 };
 
 export default showNextQuestion;

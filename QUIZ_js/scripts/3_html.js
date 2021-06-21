@@ -70,7 +70,7 @@ const selectAnswer = (e) => {
       <h1><i class="fas fa-trophy"></i></h1>
       <h3>Congrats! You scored maximum from ${questions.length} questions!</h3>
       `;
-    } else if (score < 2) {
+    } else if (score < questions.length / 2) {
       resultElement.innerHTML = `
       <h1><i class="fas fa-sad-tear"></i></h1>
       <h3>You really need to improve your HTML skills! You scored only ${score} from ${questions.length} questions!</h3>

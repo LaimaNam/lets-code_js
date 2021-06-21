@@ -14,9 +14,10 @@ let index;
 let score = 0;
 
 //-- fetching data (questions from data folfer to questions array)
-fetch('../data/HTML_questions.json')
-  .then((response) => response.json())
-  .then((data) => questions.push(...data));
+
+import fetchData from './modules/fetch.js';
+
+fetchData('../data/HTML_questions.json', questions);
 
 //Functions
 // --- starting game (after pressing "START QUIZ")

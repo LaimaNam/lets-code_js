@@ -129,50 +129,50 @@ function loadPostsXHR() {
 //--------------------------------NEW VERSION AJAX (fetch())-----------------------------------------
 // -- Getting data
 // -----using FETCH API
-// function loadPostsFETCH() {
-//   return fetch(JSONPLACEHOLDER_URI)
-//     .then((response) => {
-//       if (response.status === 200) {
-//         return response.json();
-//       }
-//     })
-//     .then((result) => {
-//       let posts = result.slice(0, 10);
+function loadPostsFETCH() {
+  return fetch(JSONPLACEHOLDER_URI)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
+    })
+    .then((result) => {
+      let posts = result.slice(0, 10);
 
-//       postsOutput.innerHTML = posts.reduce((output, currentPost) => {
-//         output += `
-//         <div>
-//           <h3> ${currentPost.title}</h3>
-//           <p>${currentPost.body}</p>
-//         </div>
-//         `;
-//         return output;
-//       }, '');
-//     })
-//     .catch((err) => console.log(err));
-// }
+      postsOutput.innerHTML = posts.reduce((output, currentPost) => {
+        output += `
+        <div>
+          <h3> ${currentPost.title}</h3>
+          <p>${currentPost.body}</p>
+        </div>
+        `;
+        return output;
+      }, '');
+    })
+    .catch((err) => console.log(err));
+}
 
 // ---using FETCH API and ASYNC AWAIT
 // ES5 async function loadPostsFETCH() {}
 // ES6
-const loadPostsFETCH = async () => {
-  try {
-    let response = await fetch(JSONPLACEHOLDER_URI, { method: 'GET' });
-    let posts = await response.json();
-    console.log(posts);
-    postsOutput.innerHTML = posts.slice(0, 10).reduce((output, currentPost) => {
-      output += `
-            <div>
-              <h3> ${currentPost.title}</h3>
-              <p>${currentPost.body}</p>
-            </div>
-            `;
-      return output;
-    }, '');
-  } catch (err) {
-    console.log(err);
-  }
-};
+// const loadPostsFETCH = async () => {
+//   try {
+//     let response = await fetch(JSONPLACEHOLDER_URI, { method: 'GET' });
+//     let posts = await response.json();
+//     console.log(posts);
+//     postsOutput.innerHTML = posts.slice(0, 10).reduce((output, currentPost) => {
+//       output += `
+//             <div>
+//               <h3> ${currentPost.title}</h3>
+//               <p>${currentPost.body}</p>
+//             </div>
+//             `;
+//       return output;
+//     }, '');
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
 // -- Sending data
 function sendPostFETCH() {

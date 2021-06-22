@@ -22,8 +22,14 @@ const secondFilterOutput = document.querySelector('#second-filter-output');
 const selectJokesCategory = document.querySelector('#joke-category-select');
 const selectJokesNumber = document.querySelector('#joke-number-select');
 
+//--logic
 let jokes = [];
+let currentJokeCategory = 'history';
+let currentNumberOfJokes = 5;
+
 //Functions
+
+// ------------ searching jokes
 const searchJokes = (e) => {
   e.preventDefault();
   if (e.target.value.length < 3) return;
@@ -42,9 +48,6 @@ const searchJokes = (e) => {
       }, '');
     });
 };
-
-let currentJokeCategory = 'history';
-let currentNumberOfJokes = 5;
 
 // ----------- show joke by category and number
 const showJokeByCategoryAndNumber = (e) => {

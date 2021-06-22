@@ -13,11 +13,15 @@ let questions = [];
 let index;
 let score = 0;
 
+//Needs to be changed based on quiz
+const btnClass = 'btn-html';
+const QUESTIONS_ENDPOINT = '../data/HTML_questions.json';
+
 //-- fetching data (questions from data folfer to questions array)
 
-import fetchData from './modules/fetch.js';
+// import fetchData from './modules/fetch.js';
 
-fetchData('../data/HTML_questions.json', questions);
+// fetchData('../data/HTML_questions.json', questions);
 
 //Functions
 // --- starting game (after pressing "START QUIZ")
@@ -92,7 +96,7 @@ const showQuestions = (question) => {
   question.answers.forEach((answer) => {
     const button = document.createElement('button');
     button.innerText = answer.text;
-    button.classList.add('btn', 'btn-html');
+    button.classList.add('btn', btnClass);
 
     if (answer.correct) {
       button.dataset.correct = answer.correct;
@@ -120,7 +124,10 @@ const resetState = () => {
 
 //Events
 document.addEventListener('DOMContentLoaded', () => {
-  startBtnElement.style.backgroundColor = 'var(--html-color)';
+  fetch('../data/HTML_questions.json')
+    .then((response) => response.json())
+    .then((data) => questions.push(...data));
+  // startBtnElement.style.backgroundColor = 'var(--html-color)';
 });
 startBtnElement.addEventListener('click', startQuiz);
 nextBtnElement.addEventListener('click', showNextQuestion);

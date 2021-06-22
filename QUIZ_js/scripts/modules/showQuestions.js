@@ -1,6 +1,6 @@
 import selectAnswer from './selectAnswer.js';
 
-const showQuestions = (questions, state) => {
+const showQuestions = (questions, state, btnClass) => {
   const question = questions[state.index];
   const questionelement = document.querySelector('#question');
   const answersBtnsElement = document.querySelector('#answers-btns');
@@ -10,7 +10,7 @@ const showQuestions = (questions, state) => {
   question.answers.forEach((answer) => {
     const button = document.createElement('button');
     button.innerText = answer.text;
-    button.classList.add('btn', 'btn-js');
+    button.classList.add('btn', btnClass);
 
     if (answer.correct) {
       button.dataset.correct = answer.correct;

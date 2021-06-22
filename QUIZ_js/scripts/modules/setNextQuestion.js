@@ -1,9 +1,9 @@
 import showQuestions from './showQuestions.js';
 import resetState from './resetState.js';
 
-const setNextQuestion = (questions, state) => {
+const setNextQuestion = (questions, state, btnClass) => {
   resetState();
-  showQuestions(questions, state);
+  showQuestions(questions, state, btnClass);
 };
 
 export default setNextQuestion;

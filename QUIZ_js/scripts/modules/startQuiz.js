@@ -5,7 +5,8 @@ const startQuiz = (
   quizQuestionElement,
   resultElement,
   state,
-  questions
+  questions,
+  btnClass
 ) => {
   startBtnElement.classList.add('hide');
   quizQuestionElement.classList.remove('hide');
@@ -18,7 +19,7 @@ const startQuiz = (
 
   state.index = 0;
 
-  setNextQuestion(questions, state);
+  setNextQuestion(questions, state, btnClass);
 };
 
 export default startQuiz;

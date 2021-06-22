@@ -11,6 +11,7 @@ const cities = [];
 fetch(CITIES_ENDPOINT)
   .then((response) => response.json())
   .then((data) => cities.push(...data));
+console.log(cities);
 
 // Functions
 // --------------------- findCities() ----------------------

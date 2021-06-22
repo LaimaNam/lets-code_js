@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- first search -->
+      <section id="first-filter">
+        <form>
+          <label for="search-input">Enter word or words:</label>
+          <input type="text" id="search-input" />
+        </form>
+        <div id="search-results"></div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <!-- second search -->
+      <section id="second-filter">
+        <form id="second-filter-form">
+          <label for="joke-category-select"
+            >Select Chuck Noriss Joke by category:</label
+          >
+          <select name="joke-category-select" id="joke-category-select">
+            <option value="history">history</option>
+            <option value="food">food</option>
+            <option value="science">science</option>
+            <option value="dev">dev</option>
+          </select>
+          <br />
+          <label for="joke-number-select">Choose number of jokes:</label>
+          <select name="joke-number-select" id="joke-number-select">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+          <input type="submit" name="" id="" value="GET ME A JOKE" />
+        </form>
+        <div id="second-filter-output"></div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

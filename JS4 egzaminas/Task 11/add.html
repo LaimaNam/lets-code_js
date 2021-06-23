@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./add.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="content">
+        <div class="btn-wrapper">
+          <button onclick="window.location.href=`index.html`" class="btn">
+            View skills
+          </button>
+        </div>
+        <!-- add skill -->
+        <div id="add-skill-wrapper">
+          <h1>Add skill:</h1>
+          <form>
+            <input type="text" placeholder="Skill" id="skill" name="skill" />
+            <button type="submit" id="addSkill" class="btn">Add skill</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

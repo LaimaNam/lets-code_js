@@ -1,0 +1,54 @@
+-------------ARRAY METHODS ---------------
+//map, reduce, filter find, every, some, includes - kazka grazina (nauja masyva), isskyrus reduce, nes jis gali grazinti ne tik masyva (ar sring'a ar numberi)
+
+let arr = [1,2,3]
+
+dzniauniai darome kopija,. nes nenorime modifikuoti array originalaus:
+
+let copyOfArr = arr.map((item) => {return item + 1})
+
+//forEach() - nieko negrazina, modifikuoja (nekuriame masyvo kopijos su variable)
+
+(loopina per item'us ir juos pavieniui logina - pvz kai norime loopinti per DOM elementus)
+arr.forEach((item) => {console.log(item + 1)})  
+
+
+ES6
+class Car {
+	constructor(name){
+	this.name = name;
+	}
+
+	start(){
+	log(`${this.name} started!`)	
+	}
+	
+	static getName(){
+ 	log(this.name)
+	}
+
+}
+
+let audi = new Car("Audi")
+
+ES5
+
+function Movie(name){
+
+}
+
+Movie.prototype.start = function(){log(`${this.name} started!`) }
+
+
+
+
+2. kiekviena karta paspaudus +1
+3.
+4.lentele gamintojas ir isvardyti modeliai (pvz kortele Audi su visais modeliais)
+5.
+7.
+8.class Calculator
+let calc = new Calculator() 
+calcl.sum(1,2)
+9.
+10. kodo keista negalima stript.js tik importai gali buti

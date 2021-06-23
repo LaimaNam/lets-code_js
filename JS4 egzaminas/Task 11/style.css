@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #364657;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 776px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.content {
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #202b38;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.btn-wrapper {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 5px;
+  background-color: #202b38;
+  outline: none;
+  border: none;
+}
+
+/* table style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+}
+
+tr:hover {
+  background-color: #202b38;
+}
+
+table thead tr {
+  border-bottom: 2px solid #546a81;
+}
+
+table th,
+td {
+  padding: 8px;
+}
+
+.deleteBtn {
+  border: none;
+  color: rgb(77, 174, 253);
+  cursor: pointer;
+}

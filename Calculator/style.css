@@ -33,6 +33,7 @@ td {
   height: 60px;
   text-align: center;
   font-size: xx-large;
+  cursor: pointer;
 }
 
 .orange {

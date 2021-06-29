@@ -3,7 +3,7 @@ div {
   margin: 50px;
   width: 350px;
   height: 550px;
-  margin: 0 auto; /* horizontally centreing an element */
+  margin: 0 auto;
   border-radius: 20px;
   padding: 10px;
 }

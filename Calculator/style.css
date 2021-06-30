@@ -36,8 +36,8 @@ td {
   cursor: pointer;
 }
 
-.orange {
-  color: #ff3300;
+.colored-operators {
+  color: #ff00bf;
 }
 
 td:active {

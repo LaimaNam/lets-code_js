@@ -57,6 +57,7 @@ const calculateValue = () => {
   }
   return answer;
 };
+
 // Events---------------------------------
 numbers.forEach((btn) =>
   btn.addEventListener('click', () => {

@@ -8,7 +8,7 @@ const clearOperator = document.querySelector('.clear');
 let num = [];
 let answer;
 
-// ----- Collecting numbers & operators and showing them on screen
+//collecting numbers & operators and showing them on screen
 const storeBtnValue = (digit) => {
   //storing string in the array
   num.push(digit);
@@ -40,7 +40,7 @@ const buildStringToEval = (arr) => {
   return screenText;
 };
 
-// ------ Setting calculator screen
+//setting calculator screen
 const setScreen = (text) => {
   screen.innerText = text;
 };
